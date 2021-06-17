@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="container"><h3>Tài xế</h3></div>
+      <ng-container *ngFor="let item of mangGhe; let index = index">
+        <app-ghe [ghe]="item"></app-ghe>
+        <br *ngIf="(index + 1) % 4 === 0" />
+      </ng-container>
+    </div>
+    <div class="col-md-6">
+      <h3>Danh sach ghe</h3>
+      <div *ngFor="let item of mangGhe">
+        Ghế: {{ item.SoGhe }} - Giá: {{ item.Gia }}$
+      </div>
+    </div>
+  </div>
+</div>

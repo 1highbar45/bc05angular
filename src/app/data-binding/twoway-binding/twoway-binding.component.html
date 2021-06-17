@@ -1,0 +1,21 @@
+<h1>*Two Binding</h1>
+<input type="text" [value]="username" [(ngModel)]="username" />
+<p>{{ username }}</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="text" class="form-control" placeholder="[(ngModel)]" [(ngModel)]="email" />
+      </div>
+      <div class="form-group">
+        <label for="">Fullname</label>
+        <input type="text" class="form-control" placeholder="[(ngModel)]" #FullName/>
+      </div>
+      <button class="btn btn-success" (click)="showFullName(FullName.value)">Submit</button>
+      <p>Email: {{ email }}</p>
+      <p>Fullname: {{ fullName }}</p>
+    </div>
+  </div>
+</div>

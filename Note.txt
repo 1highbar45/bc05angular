@@ -1,0 +1,58 @@
+* Buổi 1
+    - Component
+    - Module 
+
+npm install jquery popper.js bootstrap@4.3.1 --save
+
+
+AppModule
+    Baitap2Module
+        Baitap2Component
+            - baitap2-header
+            - baitap2-carousel
+            - baitap2-wwd
+            - baitap2-contact
+            - baitap2-listcard
+                - baitap2-card
+            - baitap2-footer 
+
+
+    Baitap3Module
+        Baitap3Component
+            - baitap3-header
+            - baitap3-carousel
+            - baitap3-footer 
+
+* Buổi 1:
+        - Component
+        - Module
+        - DataBinding
+            + OnewayBinding
+                . Text Interpolation
+                . Property Binding []
+                . Event Binding ()
+
+* Buổi 2
+        - Data Binding
+            + TwowayBinding
+        - Directive 
+            + Structural directive
+                + ngIf
+                + ngSwitch
+                + ngFor
+            + Attribute directive
+                + ngClass
+                + ngStyle
+                + attribute directive (tự định nghĩa)
+            
+* Buổi 3
+        - Interaction
+            + Input 
+            + Output
+            + Viewchild
+            + Viewchildren
+
+* Buổi 4
+        - Routing 
+            + Routing Component
+            + Routing Module
