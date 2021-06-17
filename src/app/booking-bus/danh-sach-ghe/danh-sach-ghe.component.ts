@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { GheComponent } from './../ghe/ghe.component';
+import { Component, OnInit, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-danh-sach-ghe',
@@ -36,15 +37,30 @@ export class DanhSachGheComponent implements OnInit {
     { SoGhe: 27, TenGhe: 'số 27', Gia: 100, TrangThai: false },
     { SoGhe: 28, TenGhe: 'số 28', Gia: 100, TrangThai: false },
     { SoGhe: 29, TenGhe: 'số 29', Gia: 100, TrangThai: false },
-    { SoGhe: 30, TenGhe: 'số 30', Gia: 100, TrangThai: true },
+    { SoGhe: 30, TenGhe: 'số 30', Gia: 100, TrangThai: false },
     { SoGhe: 31, TenGhe: 'số 31', Gia: 100, TrangThai: false },
     { SoGhe: 32, TenGhe: 'số 32', Gia: 100, TrangThai: false },
     { SoGhe: 33, TenGhe: 'số 33', Gia: 100, TrangThai: false },
     { SoGhe: 34, TenGhe: 'số 34', Gia: 100, TrangThai: false },
     { SoGhe: 35, TenGhe: 'số 35', Gia: 100, TrangThai: false },
+    { SoGhe: 36, TenGhe: 'số 36', Gia: 100, TrangThai: false },
   ];
+
+  mangGheChon: any = [];
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  themGhe(chair: any) {
+    const index = this.mangGheChon.findIndex(
+      (item: any) => item.SoGhe === chair.SoGhe
+    );
+    if (index === -1) {
+      this.mangGheChon.push(chair);
+      this.mangGheChon.find((item: any) => (item.tongTien += chair.Gia));
+      this.mangGhe.find((item: any) => item.SoGhe === chair.SoGhe);
+      // console.log(this.mangGheChon);
+    }
+  }
 }

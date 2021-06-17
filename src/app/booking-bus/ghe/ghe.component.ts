@@ -7,11 +7,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class GheComponent implements OnInit {
   @Input() ghe: any;
+  @Output() chonGhe = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  datGhe() {
-    console.log(this.ghe);
+  choose() {
+    if (!this.ghe.TrangThai) {
+      this.chonGhe.emit(this.ghe);
+    }
   }
 }

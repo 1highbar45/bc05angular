@@ -1,1 +1,8 @@
-<button class="btn btn-secondary" (click)="datGhe()" style="margin: 5px; width:40px" >{{ ghe.SoGhe }}</button>
+<button
+  [ngClass]="{ daChon: ghe.TrangThai }"
+  class="btn btn-secondary"
+  style="width: 40px; margin: 5px"
+  (click)="choose()"
+>
+  {{ ghe.SoGhe }}
+</button>
