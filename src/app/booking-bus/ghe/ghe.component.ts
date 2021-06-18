@@ -13,7 +13,7 @@ export class GheComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  choose() {
+  bookGhe() {
     if (!this.ghe.TrangThai) {
       this.chonGhe.emit(this.ghe);
     }

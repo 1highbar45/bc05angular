@@ -52,11 +52,19 @@ export class DanhSachGheComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  
+
   themGhe(chair: any) {
     this.mangGheChon.push(chair);
   }
 
   huyGhe(index: any) {
     this.mangGheChon.splice(index, 1);
+  }
+
+  tongTien() {
+    return this.mangGheChon.reduce((total: any, chair: any) => {
+      return total + chair.Gia;
+    }, 0);
   }
 }

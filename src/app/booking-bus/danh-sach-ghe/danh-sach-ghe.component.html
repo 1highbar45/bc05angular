@@ -9,7 +9,7 @@
         <br *ngIf="(index + 1) % 4 === 0" />
       </ng-container>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <h3>Danh sach ghe</h3>
       <div *ngFor="let item of mangGheChon; let index = index">
         Ghế: {{ item.TenGhe }} - Giá: ${{ item.Gia }}
@@ -20,12 +20,9 @@
           >[Hủy]</span
         >
       </div>
-
-      <span
-        >Tổng tiền: $<span *ngFor="let item of mangGheChon">{{
-          item.tongTien
-        }}</span></span
-      >
+    </div>
+    <div class="col-md-4">
+      <h5>Tổng Tiền: ${{ tongTien() }}</h5>
     </div>
   </div>
 </div>
