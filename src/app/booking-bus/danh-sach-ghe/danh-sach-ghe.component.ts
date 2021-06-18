@@ -53,14 +53,10 @@ export class DanhSachGheComponent implements OnInit {
   ngOnInit(): void {}
 
   themGhe(chair: any) {
-    const index = this.mangGheChon.findIndex(
-      (item: any) => item.SoGhe === chair.SoGhe
-    );
-    if (index === -1) {
-      this.mangGheChon.push(chair);
-      this.mangGheChon.find((item: any) => (item.tongTien += chair.Gia));
-      this.mangGhe.find((item: any) => item.SoGhe === chair.SoGhe);
-      // console.log(this.mangGheChon);
-    }
+    this.mangGheChon.push(chair);
+  }
+
+  huyGhe(index: any) {
+    this.mangGheChon.splice(index, 1);
   }
 }

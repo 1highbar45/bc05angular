@@ -1,7 +1,9 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h3 class="container">Tài xế</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="col-7">
+        <p class="alert alert-secondary text-center">Tài xế</p>
+      </div>
       <ng-container *ngFor="let item of mangGhe; let index = index">
         <app-ghe [ghe]="item" (chonGhe)="themGhe($event)"></app-ghe>
         <br *ngIf="(index + 1) % 4 === 0" />
@@ -9,8 +11,14 @@
     </div>
     <div class="col-md-6">
       <h3>Danh sach ghe</h3>
-      <div *ngFor="let item of mangGheChon">
+      <div *ngFor="let item of mangGheChon; let index = index">
         Ghế: {{ item.TenGhe }} - Giá: ${{ item.Gia }}
+        <span
+          class="text-danger"
+          style="cursor: pointer"
+          (click)="huyGhe(index)"
+          >[Hủy]</span
+        >
       </div>
 
       <span
